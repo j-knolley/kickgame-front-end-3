@@ -3,7 +3,7 @@ import KickDetails from "../Components/KickDetails";
 function Show() {
   return (
     <div className="Show">
-      <h2>Show</h2>
+      <h2>Details:</h2>
       <section>
         <KickDetails />
       </section>

@@ -27,8 +27,8 @@ function App() {
             <Route path="/" element={<Home />} /> {/* Home page */}
             <Route path="/kicks" element={<Index />} /> {/* Index page */}
             <Route path="/kicks/new" element={<New />} /> {/* New page */}
-            <Route path="/kicks/:index" element={<Show />} /> {/* Show page */}
-            <Route path="/kicks/:index/edit" element={<Edit />} /> {/* Edit page */}
+            <Route path="/kicks/:id" element={<Show />} /> {/* Show page */}
+            <Route path="/kicks/:id/edit" element={<Edit />} /> {/* Edit page */}
             <Route path="*" element={<FourOFour />} /> {/* 404 page */}
           </Routes>
         </main>

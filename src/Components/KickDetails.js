@@ -2,6 +2,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+// Get the API URL from environment variables
+const API = process.env.REACT_APP_API_URL;
 
 // Define the KickDetails component
 function KickDetails() {
@@ -14,8 +16,6 @@ function KickDetails() {
   // Get the 'navigate' function from the useNavigate hook
   let navigate = useNavigate();
 
-  // Get the API URL from environment variables
-  const API = process.env.REACT_APP_API_URL;
 
   // Define function to delete a kick
   const deleteKick = () => {
@@ -39,6 +39,8 @@ function KickDetails() {
       .get(`${API}/kicks/${id}`)
       .then((response) => {
         // Set the retrieved kick data to the 'kick' state
+        console.log("Here's useEffect!!")
+        console.log(response.data)
         setKick(response.data);
       })
       .catch((error) => {
